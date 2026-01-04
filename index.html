@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.png">
+<title>Product Management</title>
+</head>
+
+<body>
+
+<h1>🚀 Product Management Dashboard</h1>
+
+<div class="container">
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="🔍 Search product..." />
+    <button onclick="toggleView()" id="viewBtn">📋 Table View</button>
+  </div>
+
+  <div class="form">
+    <h3 id="formTitle">➕ Add Product</h3>
+
+    <input id="name" placeholder="Product Name *">
+    <div class="error" id="nameError"></div>
+
+    <input id="price" type="number" placeholder="Price *">
+    <div class="error" id="priceError"></div>
+
+    <input id="category" placeholder="Category *">
+    <div class="error" id="categoryError"></div>
+
+    <input id="stock" type="number" placeholder="Stock">
+    <textarea id="description" placeholder="Description"></textarea>
+
+    <button onclick="saveProduct()">💾 Save Product</button>
+  </div>
+
+  <div id="productContainer"></div>
+  <div class="pagination" id="pagination"></div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
